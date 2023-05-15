@@ -4,6 +4,8 @@ import './styles.css';
 import './todo.css';
 import App from './App';
 import TodoList from './TodoList';
+import Counter from './Counter';
+
 
 
 import reportWebVitals from './reportWebVitals';
@@ -15,6 +17,8 @@ root.render(
   <StrictMode>
     <App />
     <TodoList />
+    <Counter />
+    
   </StrictMode>
 );
 

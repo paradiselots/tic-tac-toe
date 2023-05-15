@@ -60,45 +60,6 @@ import './styles.css';/*Imports css sheet and parameters to this sheet*/
 // }
 
 /*------------------TIC TAC TOE-------------- */
-
-// export default function Board () {
-//   return (
-//    <div className='ticktactoe'>
-//     <div className='board-row'>
-//       <button className = 'square'> 1 </button>
-//       <button className = 'square'> 2 </button>
-//       <button className = 'square'> 3 </button>
-//       </div>
-//     <div className='board-row'>
-//       <button className = 'square'> 4 </button>
-//       <button className = 'square'> 5 </button>
-//       <button className = 'square'> 6 </button>
-//       </div>
-//     <div className='board-row'>
-//       <button className = 'square'> 7 </button>
-//       <button className = 'square'> 8 </button>
-//       <button className = 'square'> 9 </button>
-//     </div>
-//   </div>
-//   );
-// }
-
-
-/*Making an interactive component 
-Let’s fill the Square component with an X when you click it. 
-Declare a function called handleClick inside of the Square React fucntion. 
-Then, add onClick to the props of the button JSX element returned from the Square:
-
-React provides a special function called useState that you can call from your component to let it “remember” things. 
-Let’s store the current value of the Square in state, and change it when the Square is clicked.
-
-value stores the value and setValue is a function that can be used to change the value. 
-The null passed to useState is used as the initial value for this state variable, so value here starts off equal to null.
-
-the Square component no longer accepts props anymore
-*/
-
-/*------------------------ */
 import { useState } from 'react';
 
 function Square({ value, onSquareClick }) {
@@ -163,7 +124,7 @@ export default function Game() {
   function handlePlay(nextSquares) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares]; // Create a new history array by combining the existing history up to the current move and appending the nextSquares
     setHistory(nextHistory); // Update the history state with the new history array
-setCurrentMove(nextHistory.length - 1); // Update the currentMove state to the index of the last move
+    setCurrentMove(nextHistory.length - 1); // Update the currentMove state to the index of the last move
 }
 
 function jumpTo(nextMove) {
