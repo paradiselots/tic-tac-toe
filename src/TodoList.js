@@ -29,6 +29,10 @@ export default function TodoList() {
     setTodos(updatedTodos); // Update the todos array with the filtered todos
   };
 
+  const handleDeleteAll = () => {
+    setTodos([]);//function for a button to delete all entries saved
+  }
+
   return (
     <div className='todolist'>
       <h1>Messages</h1>
@@ -41,6 +45,8 @@ export default function TodoList() {
       {/* Render an input field that updates the inputValue state and triggers handleAddTodo on Enter key */}
       <button onClick={handleAddTodo}>Add</button>
       {/* Render a button to add a new todo */}
+      <button onClick ={handleDeleteAll}>Delete All</button>
+      {/* Render a button to delete all todos */}
       <ul>
         {/* Render the list of todos */}
         {todos.map((todo, index) => (
@@ -49,6 +55,7 @@ export default function TodoList() {
             {todo}
             <button onClick={() => handleDeleteTodo(index)}>Delete</button>
             {/* Render a delete button for each todo */}
+            
           </li>
         ))}
       </ul>
