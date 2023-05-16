@@ -5,6 +5,10 @@ import './todo.css';
 import App from './App';
 import TodoList from './TodoList';
 import Counter from './Counter';
+import {robots} from './robots';
+import Proptest from './proptest';
+// import array from './proptest';
+import 'tachyons';
 
 
 
@@ -14,11 +18,15 @@ import reportWebVitals from './reportWebVitals';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
-  <StrictMode>
+  <StrictMode >
     <App />
-    
-    <Counter />
+    <Counter id={robots[0].id} name={robots[0].name}/>
+    <Counter id={robots[1].id} name={robots[1].name}/>
+      
     <TodoList />
+    <Proptest name={robots[2].name} price = {robots[2].price} />
+      <Proptest name={robots[3].name} price = {robots[3].price} />
+      <Proptest name="Tabasco" price = "$0.99"/>
     
   </StrictMode>
 );

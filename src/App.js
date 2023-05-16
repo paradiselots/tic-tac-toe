@@ -1,63 +1,6 @@
 import './styles.css';/*Imports css sheet and parameters to this sheet*/
+// import Counter from './Counter';
 
-// Counters that update seperatly
-
-// import { useState } from 'react';
-// /*useState is like a special box that helps you remember and update a value. You put an initial value inside, and then you can change that value using a function that comes with the box.*/
-
-// export default function MyApp() {
-//   return (
-//     <div className='counters'>
-//       <h1>Counters that update separately</h1>
-//       <MyButton /> {/* Render the MyButton component */}
-//       <MyButton /> {/* Render another instance of the MyButton component */}
-//     </div>
-//   );
-// }
-
-// function MyButton() {
-//   const [count, setCount] = useState(0); // Declare a state variable 'count' and a function 'setCount' to update it
-
-//   function handleClick() { // Define a function that will be called when the button is clicked
-//     setCount(count + 1); // Increment the 'count' state by 1
-//   }
-
-//   return (
-//     <button onClick={handleClick}> {/* Assign the 'handleClick' function to the 'onClick' event */}
-//       Clicked {count} + times {/* Display the current value of 'count' */}
-//     </button>
-//   );
-// }
-
-/*---------------------------------------------- */
-
-// COUNTERS THAT UPDATE TOGETHER
-
-// import { useState } from 'react';
-
-// export default function MyApp() {
-//   const [count, setCount] = useState(0); // Declare a state variable 'count' and a function 'setCount' to update it
-
-//   function handleClick() { // Define a function that will be called when the button is clicked
-//     setCount(count + 1); // Increment the 'count' state by 1
-//   }
-
-//   return (
-//     <div className='counters'>
-//       <h1>Counters that update together</h1>
-//       <MyButton count={count} onClick={handleClick} /> {/* Render the MyButton component with the current 'count' value and the 'handleClick' function */}
-//       <MyButton count={count} onClick={handleClick} /> {/* Render another instance of the MyButton component with the same 'count' value and 'handleClick' function */}
-//     </div>
-//   );
-// }
-
-// function MyButton({ count, onClick }) { // Receive the 'count' and 'onClick' props from the parent component
-//   return (
-//     <button onClick={onClick}> {/* Assign the 'onClick' function to the 'onClick' event */}
-//       Clicked {count} times {/* Display the current value of 'count' */}
-//     </button>
-//   );
-// }
 
 /*------------------TIC TAC TOE-------------- */
 import { useState } from 'react';
@@ -91,6 +34,8 @@ function Board({ xIsNext, squares, onPlay }) {
   } else {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O'); // If there is no winner, display the next player's turn
   }
+
+
 
   return (
     <div className='tictactoe'>

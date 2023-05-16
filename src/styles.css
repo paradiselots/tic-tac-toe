@@ -25,7 +25,7 @@ code {
 /* tic tac toe */
 
 
-* {
+ * {
   box-sizing: border-box;
 }
 
@@ -89,15 +89,15 @@ body {
   background: #fff;
   border: 10px solid #999;
   float: left;
-  font-size: 4em;
+  font-size: 2em;
   font-weight: bold;
-  line-height: 20rem;
-  height: 20rem;
+  line-height: 10rem;
+  height: 10rem;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 20rem;
+  width: 10rem;
 }
 
 .board-row:after {
@@ -123,3 +123,22 @@ body {
   margin-left: 20px;
 }
 
+/* ============================================= */
+
+.component {
+  display: flex;
+  flex-direction: row;
+  font-size: 3rem;
+}
+
+.player {
+  
+  font-size: 3rem;
+}
+
+#root{
+  
+  font-size: 2rem;
+  color: lightseagreen;
+  text-align: center;
+}
